@@ -1,0 +1,8 @@
+开始的时候
+  File "evaluate.py", line 16, in __init__
+    self.best[eles[0]] = float(eles[2])
+
+IndexError: list index out of range
+
+后来发现是eval.data这个文件下载出现乱码，于是将里面的数据复制出来，重新建立一个txt文件，并将上面的evaluate.py 中的f = open("./eval.data")改为
+f = open("./eval.txt")
